@@ -18,6 +18,7 @@ init =
 
 {- MESSAGES
  note how the Increment message requires an integer
+ note: integer is the type of the payload of the message, not of the message.
 -}
 type Msg
     = Increment Int

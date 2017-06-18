@@ -17,7 +17,6 @@ init =
 
 
 {- MESSAGES
- note how the Increment message requires an integer
 -}
 type Msg
     = Increment Int
@@ -25,7 +24,6 @@ type Msg
 
 
 {- VIEW
- in the view we trigger the message "Increment" with a payload "2"
 -}
 view : Model -> Html Msg
 view model =
@@ -36,11 +34,6 @@ view model =
         ]
 
 {- UPDATE
- the payload is extracted using the pattern matching:
-
- Increment 2 = Increment howMuch
-
-Wow !
 -}
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
@@ -51,10 +44,6 @@ update msg model =
                ( model - howMuch, Cmd.none)                   
 
 {- SUBSCRIPTIONS
- * subscriptions listen for external inputs to the app
- * external inputs examples:
-    - mouse movement
-    - keyboard events
 -}
 subscriptions : Model -> Sub Msg
 subscriptions model =
