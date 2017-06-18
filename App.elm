@@ -22,7 +22,6 @@ init =
  * Messages are things that happen in the app, to which components respond to.
 
 -}
-
 type Msg =
      NoOp
 
